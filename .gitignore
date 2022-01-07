@@ -105,3 +105,6 @@ dist
 
 #dccache
 .dccache
+
+#mac
+.DS_Store
