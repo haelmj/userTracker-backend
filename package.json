@@ -1,23 +1,54 @@
 {
-  "name": "usertracker",
+  "name": "userattendancetracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Core funcionalities Draft",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "tsc -p .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haelmj/userTracker.git"
+    "url": "git+https://github.com/haelmj/userTracker-backend.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/haelmj/userTracker/issues"
+    "url": "https://github.com/haelmj/userTracker-backend/issues"
   },
-  "homepage": "https://github.com/haelmj/userTracker#readme",
+  "homepage": "https://github.com/haelmj/userTracker-backend#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^6.1.5"
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
+    "envalid": "^7.2.2",
+    "express": "^4.17.2",
+    "helmet": "^5.0.2",
+    "module-alias": "^2.2.2",
+    "mongoose": "^6.1.8",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^17.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  },
+  "moduleAliases": {
+    "@/middlewares/": "dist/middlewares/",
+    "@/resources/": "dist/resources/",
+    "@/utils/": "dist/utils/"
   }
 }
