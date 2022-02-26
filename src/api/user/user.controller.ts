@@ -1,7 +1,10 @@
 import { Router } from "express";
 import { UserModel } from "./user.model";
+import Controller from "@/utils/interfaces/controller.interface";
 
-export class UserController {
+interface IUserController extends Controller {}
+
+export class UserController implements IUserController{
   public path = "/users";
   public router: Router = Router();
 
