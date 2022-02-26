@@ -1,14 +1,15 @@
-import { Schema, Model, Types} from "mongoose";
+import { ObjectId } from "bson";
+import { Schema, Model} from "mongoose";
 
 interface Attendance {
-    _id: Types.ObjectId;
-    userId: Types.ObjectId;
+    _id: ObjectId;
+    userId: ObjectId;
     checkedIn: Date;
     checkedOut: Date;
 };
 
 interface Branch {
-    _id: Types.ObjectId;
+    _id: ObjectId;
     location: String;
     latitude: Number;
     longitude: Number;
@@ -17,8 +18,8 @@ interface Branch {
 }
 
 interface User {
-    _id: Types.ObjectId;
-    branch_id: Types.ObjectId;
+    _id: ObjectId;
+    branch_id: ObjectId;
     user_name: String;
     first_name: String;
     last_name: String;
@@ -33,12 +34,12 @@ interface User {
 }
 
 const userSchema = new Schema<User, Model<User>>({
-    _id: {type: Types.ObjectId, required: true},
+    _id: {type: ObjectId, required: true},
     user_name: {
         type: String,
         required: true
     },
-    branch_id: {type: Types.ObjectId, required: true},
+    branch_id: {type: ObjectId, required: true},
     first_name: {type: String, required: true},
     last_name: {type: String, required: true},
     password_hash: {type: String, required: true},
@@ -51,7 +52,7 @@ const userSchema = new Schema<User, Model<User>>({
 })
 
 const branchesSchema = new Schema<Branch, Model<Branch>>({
-    _id: Types.ObjectId,
+    _id: ObjectId,
     location: String,
     latitude: Number,
     longitude: Number,
@@ -59,8 +60,8 @@ const branchesSchema = new Schema<Branch, Model<Branch>>({
     last_modified: Date,
 })
 const attendanceSchema = new Schema<Attendance, Model<Attendance>> ({
-    _id: {type: Types.ObjectId, required: true},
-    userId: {type: Types.ObjectId, required: true},
+    _id: {type: ObjectId, required: true},
+    userId: {type: ObjectId, required: true},
     checkedIn: Date,
     checkedOut: Date
 })
