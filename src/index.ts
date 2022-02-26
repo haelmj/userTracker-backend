@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import 'module-alias/register';
 import validateEnv from '@/utils/validateEnv';
-import App from './app';
+import App from './api/app';
 
 // validate the environment variables
 validateEnv();
