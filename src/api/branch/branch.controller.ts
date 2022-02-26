@@ -1,7 +1,13 @@
 import { Router } from "express";
+import { BranchModel } from "./branch.model";
 
 export class BranchController {
-  private app: Router;
+  public path = "/branches";
+  public router: Router = Router();
 
-  constructor() {}
+  constructor() {
+    this.initializeRoutes();
+  }
+
+  private initializeRoutes() {}
 }

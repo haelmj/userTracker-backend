@@ -1,7 +1,13 @@
 import { Router } from "express";
+import { UserModel } from "./user.model";
 
 export class UserController {
-  private app: Router;
+  public path = "/users";
+  public router: Router = Router();
 
-  constructor() {}
+  constructor() {
+    this.initializeRoutes();
+  }
+
+  private initializeRoutes() {}
 }
