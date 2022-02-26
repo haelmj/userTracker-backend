@@ -1,7 +1,16 @@
 import { Router } from "express";
+import { BranchModel } from "./branch.model";
+import Controller from "@/utils/interfaces/controller.interface";
 
-export class BranchController {
-  private app: Router;
+interface IBranchController extends Controller {}
 
-  constructor() {}
+export class BranchController implements IBranchController{
+  public path = "/branches";
+  public router: Router = Router();
+
+  constructor() {
+    this.initializeRoutes();
+  }
+
+  private initializeRoutes() {}
 }

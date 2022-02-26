@@ -1,7 +1,17 @@
 import { Router } from "express";
+import { AttendanceModel } from "./attendance.model";
+import Controller from "@/utils/interfaces/controller.interface";
 
-export class AttendanceController {
-  private app: Router;
+interface IAttendanceController extends Controller {
+  
+}
+export class AttendanceController implements IAttendanceController {
+  public path = "/attendance";
+  public router: Router = Router();
 
-  constructor() {}
+  constructor() {
+    this.initializeRoutes();
+  }
+  
+  private initializeRoutes() {}
 }

@@ -1,20 +1,12 @@
-import { Types } from "mongoose";
+import { ObjectId } from 'bson'
+import { Schema, Model, model } from 'mongoose'
+import Attendance from './attendance.interface'
 
-export class Attendance {
-  private _id: Types.ObjectId;
-  private userId: Types.ObjectId;
-  private checkedIn: Date;
-  private checkedOut: Date;
+const AttendanceSchema = new Schema<Attendance, Model<Attendance>>({
+  _id: { type: ObjectId, required: true },
+  userId: { type: ObjectId, required: true },
+  checkedIn: Date,
+  checkedOut: Date
+})
 
-  constructor(
-    _id: Types.ObjectId,
-    userId: Types.ObjectId,
-    checkedIn: Date,
-    checkedOut: Date
-  ) {
-    this._id = _id;
-    this.userId = userId;
-    this.checkedIn = checkedIn;
-    this.checkedOut = checkedOut;
-  }
-}
+export const AttendanceModel = model<Attendance>('attendance', AttendanceSchema)
