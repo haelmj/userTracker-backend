@@ -31,7 +31,7 @@
     "express-session": "1.17.1",
     "helmet": "^5.0.2",
     "jsonwebtoken": "8.5.1",
-    "lusca": "1.6.1",
+    "lusca": "1.7.0",
     "module-alias": "^2.2.2",
     "mongodb": "^4.3.0",
     "mongoose": "^6.1.9",
