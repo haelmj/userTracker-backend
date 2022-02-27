@@ -28,7 +28,7 @@
     "dotenv": "^14.3.2",
     "envalid": "^7.2.2",
     "express": "^4.17.2",
-    "express-session": "1.17.1",
+    "express-session": "1.17.2",
     "helmet": "^5.0.2",
     "jsonwebtoken": "8.5.1",
     "lusca": "1.6.1",
