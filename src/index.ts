@@ -1,7 +1,10 @@
 import 'dotenv/config';
 import 'module-alias/register';
 import validateEnv from '@/utils/validateEnv';
-import App from './api/app';
+import App from './app';
+import { AttendanceController } from 'api/attendance/attendance.controller';
+import {BranchController} from 'api/branch/branch.controller';
+import {UserController} from 'api/user/user.controller';
 
 // validate the environment variables
 validateEnv();
