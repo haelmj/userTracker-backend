@@ -9,7 +9,6 @@
     "outDir": "dist",
     "paths": {
       "@/middlewares/*": ["./middlewares/*"],
-      "@/resources/*": ["./resources/*"],
       "@/utils/*": ["./utils/*"]
     }
   },
